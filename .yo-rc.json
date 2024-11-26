@@ -1,0 +1,21 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.20.5",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.24.0"
+    },
+    "version": "1.20.0",
+    "libraryName": "intranet-colbunv-2",
+    "libraryId": "c5b68dd7-1f41-4ab4-95a0-53c6765065e7",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "intranet_colbunv2",
+    "solutionShortDescription": "intranet_colbunv2 description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

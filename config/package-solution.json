@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "intranet-colbunv-2-client-side-solution",
+    "id": "c5b68dd7-1f41-4ab4-95a0-53c6765065e7",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.20.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "intranet_colbunv2 description"
+      },
+      "longDescription": {
+        "default": "intranet_colbunv2 description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "intranet-colbunv-2 Feature",
+        "description": "The feature that activates elements of the intranet-colbunv-2 solution.",
+        "id": "ee9457e9-9d89-4333-8083-5ab1233584ee",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/intranet-colbunv-2.sppkg"
+  }
+}
