@@ -1,127 +1,47 @@
 import * as React from "react";
-import styles from "./WpBienvenido.module.scss";
 import type { IWpBienvenidoProps } from "./IWpBienvenidoProps";
 import { escape } from "@microsoft/sp-lodash-subset";
-import { FontIcon } from "@fluentui/react/lib/Icon";
-import { mergeStyles } from "@fluentui/react/lib/Styling";
+// import styles from "./WpBienvenido.module.scss";
+import {registerIcons} from '@fluentui/react/lib/Styling';
+import {TransferCallIcon} from '@fluentui/react-icons-mdl2';
+import {MailIcon} from '@fluentui/react-icons-mdl2';
+import {RelationshipIcon} from '@fluentui/react-icons-mdl2';
 require("../assets/Css/style.css");
 
-const iconClass = mergeStyles({
-  fontSize: 50,
-  height: 50,
-  width: 50,
-  margin: "0 25px",
+registerIcons({
+  icons: {
+    TransferCall: <TransferCallIcon />,
+    Mail: <MailIcon/>,
+    Share: <RelationshipIcon/>,
+  },
 });
+
+const ActionClick = () =>{
+  alert("Se logró!")
+};
 
 export default class WpBienvenido extends React.Component<IWpBienvenidoProps> {
   public render(): React.ReactElement<IWpBienvenidoProps> {
-    const {
-      description,
-      isDarkTheme,
-      environmentMessage,
-      hasTeamsContext,
-      userDisplayName,
-    } = this.props;
+    const { userDisplayName } = this.props;
 
     return (
-      <section
-        className={`${styles.wpBienvenido} ${
-          hasTeamsContext ? styles.teams : ""
-        }`}
-      >
-        <div className={styles.welcome}>
-          <img
-            alt=""
-            src={
-              isDarkTheme
-                ? require("../assets/welcome-dark.png")
-                : require("../assets/welcome-light.png")
-            }
-            className={styles.welcomeImage}
-          />
-          <h2>Well done, {escape(userDisplayName)}!</h2>
-          <div>{environmentMessage}</div>
+      <div className="header">
+        <div className="contenorUsuario">
+          <img className="iconUser" 
+               src="/_layouts/15/userphoto.aspx?size=S&amp;accountname=ep_ssanchez@colbun.cl" 
+               alt="Foto de usuario" />
+          <div className="userInfo">
+              <h5 className="textLog">Bienvenido</h5>
+              <p className="userText">{escape(userDisplayName)}</p>
+          </div>  
           <div>
-            Web part property value: <strong>{escape(description)}</strong>
+              <TransferCallIcon onClick={ActionClick} 
+              style={{fontSize:20, marginLeft:20}}/>
+              <RelationshipIcon style={{fontSize:20, marginLeft:15}}/>
+              <MailIcon style={{fontSize:20, marginLeft:15}}/>
           </div>
         </div>
-        <div>
-          <h3 className="hola">Welcome to SharePoint Framework!</h3>
-          <p>
-            The SharePoint Framework (SPFx) is a extensibility model for
-            Microsoft Viva, Microsoft Teams and SharePoint. It&#39;s the easiest
-            way to extend Microsoft 365 with automatic Single Sign On, automatic
-            hosting and industry standard tooling.
-          </p>
-          <h4>Learn more about SPFx development:</h4>
-          <ul className={styles.links}>
-            <li>
-              <a href="https://aka.ms/spfx" target="_blank" rel="noreferrer">
-                SharePoint Framework Overview
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://aka.ms/spfx-yeoman-graph"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Use Microsoft Graph in your solution
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://aka.ms/spfx-yeoman-teams"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Build for Microsoft Teams using SharePoint Framework
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://aka.ms/spfx-yeoman-viva"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Build for Microsoft Viva Connections using SharePoint Framework
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://aka.ms/spfx-yeoman-store"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Publish SharePoint Framework applications to the marketplace
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://aka.ms/spfx-yeoman-api"
-                target="_blank"
-                rel="noreferrer"
-              >
-                SharePoint Framework API reference
-              </a>
-            </li>
-            <li>
-              <a href="https://aka.ms/m365pnp" target="_blank" rel="noreferrer">
-                Microsoft 365 Developer Community
-              </a>
-            </li>
-          </ul>
-          <div>
-            <div>
-              <FontIcon
-                aria-label="Train"
-                iconName="TrainSolid"
-                className={iconClass}
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      </div>
     );
   }
 }
