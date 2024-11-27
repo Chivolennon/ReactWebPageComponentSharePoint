@@ -2,7 +2,7 @@ import * as React from "react"; // importa react, necesario pra crear componente
 import { IWpCarouselProps } from "./IWpCarouselProps"; // Importa propiedades específicas del componente
 import Carousel from "react-multi-carousel"; // importa componentes de carousel
 import "react-multi-carousel/lib/styles.css"; // Importa los estilos default de la librería para el carrusel. 
-require("/Users/ep_ssanchez/Dev_Colbun/src/webparts/wpBienvenido/assets/Css/style.css");
+require("../assets/Css/style.Css");
 
 // Determina cuantos elementos son integrados al carrusel.
 const responsive = {
@@ -44,14 +44,37 @@ const WpCarousel: React.FC<IWpCarouselProps> = (WpBienvenido) => { // FC = Compo
       itemClass="carousel-item-padding-40-px" // Clase Css para los elemntos del carrusel. 
       >
 
-
-      <div>Item 1 <br /></div>
-      <div>Item 2 <br /></div>
-      <div>Item 3 <br /></div>
-      <div>Item 4 <br /></div>
+      <div>
+        <img 
+          style={{width:"80px", height:"80px"}}
+          src={require('../assets/Colbun_only_logo.png')}
+          />
+      </div>
+      <div>
+        <img 
+          style={{width:"80px", height:"80px"}}
+          src={require('../assets/1.png')}
+          />
+      </div>
+      <div>
+        <img 
+          style={{width:"80px", height:"80px"}}
+          src={require('../assets/2.png')}
+          />
+      </div>
+      <div>
+        <img 
+          style={{width:"80px", height:"80px"}}
+          src={require('../assets/3.png')}
+          />
+      </div>
+      <div>
+        <img 
+          style={{width:"80px", height:"80px"}}
+          src={require('../assets/4.png')}
+          />
+      </div>
     </Carousel>
   );
 };
-
-
 export default WpCarousel;
