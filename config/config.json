@@ -9,10 +9,19 @@
           "manifest": "./src/webparts/wpBienvenido/WpBienvenidoWebPart.manifest.json"
         }
       ]
+    },
+    "wp-carousel-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/wpCarousel/WpCarouselWebPart.js",
+          "manifest": "./src/webparts/wpCarousel/WpCarouselWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
   "localizedResources": {
-    "WpBienvenidoWebPartStrings": "lib/webparts/wpBienvenido/loc/{locale}.js"
+    "WpBienvenidoWebPartStrings": "lib/webparts/wpBienvenido/loc/{locale}.js",
+    "WpCarouselWebPartStrings": "lib/webparts/wpCarousel/loc/{locale}.js"
   }
 }

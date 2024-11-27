@@ -36,3 +36,32 @@
     line-height: 1; /* Reduce el espacio entre las líneas de texto */
   }
   
+.ulPart{
+  display: block;
+    columns: 5;
+    -webkit-columns: 5;
+    -moz-columns: 5;
+}
+
+.commandBarContainer {
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  max-height: 50px;
+  justify-content: center;
+  gap: 50px;
+}
+
+.commandBarContainer:hover {
+  max-height: 200px; /* Altura máxima cuando el mouse está encima */
+}
+
+.logo{
+  width: 100px;
+  height: 100px;
+  float: left;
+  position: relative;
+  left: -450px;;
+}
