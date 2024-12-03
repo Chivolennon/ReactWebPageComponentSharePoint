@@ -17,11 +17,29 @@
           "manifest": "./src/webparts/wpCarousel/WpCarouselWebPart.manifest.json"
         }
       ]
+    },
+    "wp-noticias-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/wpNoticias/WpNoticiasWebPart.js",
+          "manifest": "./src/webparts/wpNoticias/WpNoticiasWebPart.manifest.json"
+        }
+      ]
+    },
+    "wp-articulos-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/wpArticulos/WpArticulosWebPart.js",
+          "manifest": "./src/webparts/wpArticulos/WpArticulosWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
   "localizedResources": {
     "WpBienvenidoWebPartStrings": "lib/webparts/wpBienvenido/loc/{locale}.js",
-    "WpCarouselWebPartStrings": "lib/webparts/wpCarousel/loc/{locale}.js"
+    "WpCarouselWebPartStrings": "lib/webparts/wpCarousel/loc/{locale}.js",
+    "WpNoticiasWebPartStrings": "lib/webparts/wpNoticias/loc/{locale}.js",
+    "WpArticulosWebPartStrings": "lib/webparts/wpArticulos/loc/{locale}.js"
   }
 }

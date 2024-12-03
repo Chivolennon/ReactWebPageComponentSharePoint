@@ -19,7 +19,6 @@ const WpBienvenido: React.FC<IWpBienvenidoProps> = ({ userDisplayName }) => {
     alert("Se logró!");
   };
 
-
   return (
     <div className="header">
       <div className="contenorUsuario"> 
