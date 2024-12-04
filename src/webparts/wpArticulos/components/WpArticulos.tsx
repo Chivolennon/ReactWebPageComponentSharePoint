@@ -1,43 +1,44 @@
-import * as React from 'react';
-import styles from './WpArticulos.module.scss';
-import type { IWpArticulosProps } from './IWpArticulosProps';
-import { escape } from '@microsoft/sp-lodash-subset';
+import * as React from "react";
+import type { IWpArticulosProps } from "./IWpArticulosProps";
+require("../assets/Css/style.css");
 
-export default class WpArticulos extends React.Component<IWpArticulosProps> {
-  public render(): React.ReactElement<IWpArticulosProps> {
-    const {
-      description,
-      isDarkTheme,
-      environmentMessage,
-      hasTeamsContext,
-      userDisplayName
-    } = this.props;
+const WpArticulos: React.FC<IWpArticulosProps> = ({}) => {
+  return (
+    <div className="container">
 
-    return (
-      <section className={`${styles.wpArticulos} ${hasTeamsContext ? styles.teams : ''}`}>
-        <div className={styles.welcome}>
-          <img alt="" src={isDarkTheme ? require('../assets/welcome-dark.png') : require('../assets/welcome-light.png')} className={styles.welcomeImage} />
-          <h2>Well done, {escape(userDisplayName)}!</h2>
-          <div>{environmentMessage}</div>
-          <div>Web part property value: <strong>{escape(description)}</strong></div>
+      {/* //LADO IZQUIERDO */}
+      <div className="left">
+        <div className="item">
+          <img
+            src={require("../assets/like.png")}
+            alt="like"
+            // style={{ width: "auto", height: "auto" }}
+          />
         </div>
-        <div>
-          <h3>Welcome to SharePoint Framework!</h3>
-          <p>
-            The SharePoint Framework (SPFx) is a extensibility model for Microsoft Viva, Microsoft Teams and SharePoint. It&#39;s the easiest way to extend Microsoft 365 with automatic Single Sign On, automatic hosting and industry standard tooling.
-          </p>
-          <h4>Learn more about SPFx development:</h4>
-          <ul className={styles.links}>
-            <li><a href="https://aka.ms/spfx" target="_blank" rel="noreferrer">SharePoint Framework Overview</a></li>
-            <li><a href="https://aka.ms/spfx-yeoman-graph" target="_blank" rel="noreferrer">Use Microsoft Graph in your solution</a></li>
-            <li><a href="https://aka.ms/spfx-yeoman-teams" target="_blank" rel="noreferrer">Build for Microsoft Teams using SharePoint Framework</a></li>
-            <li><a href="https://aka.ms/spfx-yeoman-viva" target="_blank" rel="noreferrer">Build for Microsoft Viva Connections using SharePoint Framework</a></li>
-            <li><a href="https://aka.ms/spfx-yeoman-store" target="_blank" rel="noreferrer">Publish SharePoint Framework applications to the marketplace</a></li>
-            <li><a href="https://aka.ms/spfx-yeoman-api" target="_blank" rel="noreferrer">SharePoint Framework API reference</a></li>
-            <li><a href="https://aka.ms/m365pnp" target="_blank" rel="noreferrer">Microsoft 365 Developer Community</a></li>
-          </ul>
+        <div className="item">
+          <img
+            src={require("../assets/heath.png")}
+            alt="corazon"
+            // style={{ width: "auto", height: "auto" }}
+          />
         </div>
-      </section>
-    );
-  }
-}
+        <div className="item">
+          <img src={require("../assets/hand.png")} 
+          alt="hand" />
+        </div>
+        <div className="item">
+          <img src={require("../assets/smile.png")} 
+          alt="smile" />
+        </div>
+      </div>
+      {/* // LADO DERECHO */}
+      <div className="right">
+        <div className="item">A</div>
+        <div className="item">B</div>
+        <div className="item">C</div>
+        <div className="item">D</div>
+      </div>
+    </div>
+  );
+};
+export default WpArticulos;
