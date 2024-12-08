@@ -8,35 +8,35 @@ const WpArticulos: React.FC<IWpArticulosProps> = ({}) => {
 
       {/* //LADO IZQUIERDO */}
       <div className="left">
-        <div className="item">
+        <div className="itemArt">
           <img
             src={require("../assets/like.png")}
             alt="like"
             // style={{ width: "auto", height: "auto" }}
           />
         </div>
-        <div className="item">
+        <div className="itemArt">
           <img
             src={require("../assets/heath.png")}
             alt="corazon"
             // style={{ width: "auto", height: "auto" }}
           />
         </div>
-        <div className="item">
+        <div className="itemArt">
           <img src={require("../assets/hand.png")} 
           alt="hand" />
         </div>
-        <div className="item">
+        <div className="itemArt">
           <img src={require("../assets/smile.png")} 
           alt="smile" />
         </div>
       </div>
       {/* // LADO DERECHO */}
       <div className="right">
-        <div className="item">A</div>
-        <div className="item">B</div>
-        <div className="item">C</div>
-        <div className="item">D</div>
+        <div className="itemArt">A</div>
+        <div className="itemArt">B</div>
+        <div className="itemArt">C</div>
+        <div className="itemArt">D</div>
       </div>
     </div>
   );
