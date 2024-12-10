@@ -41,6 +41,14 @@
           "manifest": "./src/webparts/wpGaleria/WpGaleriaWebPart.manifest.json"
         }
       ]
+    },
+    "wp-nav-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/wpNav/WpNavWebPart.js",
+          "manifest": "./src/webparts/wpNav/WpNavWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
@@ -49,6 +57,7 @@
     "WpCarouselWebPartStrings": "lib/webparts/wpCarousel/loc/{locale}.js",
     "WpNoticiasWebPartStrings": "lib/webparts/wpNoticias/loc/{locale}.js",
     "WpArticulosWebPartStrings": "lib/webparts/wpArticulos/loc/{locale}.js",
-    "WpGaleriaWebPartStrings": "lib/webparts/wpGaleria/loc/{locale}.js"
+    "WpGaleriaWebPartStrings": "lib/webparts/wpGaleria/loc/{locale}.js",
+    "WpNavWebPartStrings": "lib/webparts/wpNav/loc/{locale}.js"
   }
 }

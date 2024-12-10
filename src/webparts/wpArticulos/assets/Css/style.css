@@ -1,22 +1,35 @@
-.container {
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*Ayuda a evitar el desbordamiento*/
+ }
+ .containerArt {
     display: grid;
-    grid-template-columns: 40% 60%;
-    height: 25vh;
+    grid-template-columns: auto 60%;
+    height: auto;
+    gap: 5px; /* Espacio entre columnas*/
+    overflow: hidden; /*Evita desbordamiento*/
   }
 
-  .left, .right {
+  .leftArt{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: auto auto;
+    gap: 5px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    height: 100%;
+    align-items: stretch;
+    justify-items: stretch;
+  }
+
+  .rightArt{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    padding: 15px;
-  }
-
-  .left {
+    gap: 5px;
+    padding: 10px;
     background-color: #f0f0f0;
-  }
-
-  .right {
-    background-color: #e0e0e0;
   }
 
   .itemArt {
@@ -26,12 +39,21 @@
     justify-content: center;
     border: 1px solid #999;
     overflow: hidden;
+    aspect-ratio: 1; /* Asegura que los contenedores esan cuadrados*/
   }
 
-  .item img{
+  .itemArt img{
     width: auto;
     height: auto;
-    object-fit: cover;
     max-width: 100%;
     max-height: 100%;
+    object-fit: contain; /* Asegura que la imagen se ajuste sin distorsión*/
+    border-radius: 5px;
+  }
+  
+  .parentContainerArt{
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 1200px; /* Establece un límite si es necesario */
+    margin: auto; /* Centra el contenedor */
+    overflow: hidden; /* Evita desbordamientos */
   }

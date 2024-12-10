@@ -1,7 +1,9 @@
+import { SPHttpClient } from "@microsoft/sp-http";
+import { ISPFXContext } from "@pnp/sp";
+
 export interface IWpGaleriaProps {
-  description: string;
-  isDarkTheme: boolean;
-  environmentMessage: string;
-  hasTeamsContext: boolean;
-  userDisplayName: string;
+  spHttpClient: SPHttpClient; // Cliente HTTP de SharePoint
+  siteUrl: string; // URL del sitio actual
+  context: ISPFXContext;
 }
+
