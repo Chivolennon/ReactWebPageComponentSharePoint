@@ -66,7 +66,7 @@ const WpNoticias: React.FC<IWpNoticiasProps> = ({
         <ListCard newsNoticias={masLeidas} />
       </div>
       {/* Botones de Ver Más y Ver Menos */}
-      <div className="newsFooter">
+      <div className="newFooter">
         {visibleNews < newsNoticias.length && (
           <button className="verMas" onClick={handVerMas}>
             Ver más

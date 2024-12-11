@@ -111,3 +111,13 @@
 .verMas:hover, .verMenos:hover {
   background-color: #005a9e;
 }
+
+.noticeImage{
+  transition: transform 0.4s;
+}
+.noticeImage:hover{
+  transform: scale(1.1);
+}
+.newFooter{
+  text-align: center;
+}

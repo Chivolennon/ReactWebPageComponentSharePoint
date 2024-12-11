@@ -16,9 +16,10 @@
   justify-content: center;
   align-items: center;
   border-radius: 8px;
-  height: 100%; /* Ocupa su espacio asignado */
+  height: 300px; /* Ajusta según tu diseño */
+  overflow: hidden; /* Evita que el contenido desborde */
+  width: 100%;
 }
-
 .categoryBarLeft {
   display: flex;
   justify-content: center;
@@ -79,6 +80,11 @@
 
 .slider-image {
   max-width: 100%;
-  height: auto;
+  max-height: 100%;
+  object-fit: contain; /* Ajusta la imagen sin distorsión */
   border-radius: 8px;
 }
+
+
+
+
