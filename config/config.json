@@ -49,6 +49,14 @@
           "manifest": "./src/webparts/wpNav/WpNavWebPart.manifest.json"
         }
       ]
+    },
+    "wp-avisos-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/wpAvisos/WpAvisosWebPart.js",
+          "manifest": "./src/webparts/wpAvisos/WpAvisosWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
