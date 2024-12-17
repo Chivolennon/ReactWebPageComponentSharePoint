@@ -58,6 +58,7 @@
     "WpNoticiasWebPartStrings": "lib/webparts/wpNoticias/loc/{locale}.js",
     "WpArticulosWebPartStrings": "lib/webparts/wpArticulos/loc/{locale}.js",
     "WpGaleriaWebPartStrings": "lib/webparts/wpGaleria/loc/{locale}.js",
-    "WpNavWebPartStrings": "lib/webparts/wpNav/loc/{locale}.js"
+    "WpNavWebPartStrings": "lib/webparts/wpNav/loc/{locale}.js",
+    "PropertyControlStrings": "node_modules/@pnp/spfx-property-controls/lib/loc/{locale}.js"
   }
 }
